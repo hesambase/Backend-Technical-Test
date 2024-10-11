@@ -1,0 +1,36 @@
+
+CREATE TABLE IF NOT EXISTS TaxRates (
+    Id INTEGER PRIMARY KEY,
+    StartTime TEXT NOT NULL,
+    EndTime TEXT NOT NULL,
+    Amount INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Holidays (
+    Id INTEGER PRIMARY KEY,
+    Date TEXT NOT NULL
+);
+
+-- Insert tax rates
+INSERT INTO TaxRates (StartTime, EndTime, Amount) VALUES ('06:00', '06:29', 8);
+INSERT INTO TaxRates (StartTime, EndTime, Amount) VALUES ('06:30', '06:59', 13);
+INSERT INTO TaxRates (StartTime, EndTime, Amount) VALUES ('07:00', '07:59', 18);
+INSERT INTO TaxRates (StartTime, EndTime, Amount) VALUES ('08:00', '08:29', 13);
+INSERT INTO TaxRates (StartTime, EndTime, Amount) VALUES ('08:30', '14:59', 8);
+INSERT INTO TaxRates (StartTime, EndTime, Amount) VALUES ('15:00', '15:29', 13);
+INSERT INTO TaxRates (StartTime, EndTime, Amount) VALUES ('15:30', '16:59', 18);
+INSERT INTO TaxRates (StartTime, EndTime, Amount) VALUES ('17:00', '17:59', 13);
+INSERT INTO TaxRates (StartTime, EndTime, Amount) VALUES ('18:00', '18:29', 8);
+
+-- Insert holidays
+INSERT INTO Holidays (Date) VALUES ('2013-01-01');
+INSERT INTO Holidays (Date) VALUES ('2013-03-29');
+INSERT INTO Holidays (Date) VALUES ('2013-03-31');
+INSERT INTO Holidays (Date) VALUES ('2013-04-01');
+INSERT INTO Holidays (Date) VALUES ('2013-05-01');
+INSERT INTO Holidays (Date) VALUES ('2013-05-09');
+INSERT INTO Holidays (Date) VALUES ('2013-06-06');
+INSERT INTO Holidays (Date) VALUES ('2013-06-22');
+INSERT INTO Holidays (Date) VALUES ('2013-11-01');
+INSERT INTO Holidays (Date) VALUES ('2013-12-25');
+INSERT INTO Holidays (Date) VALUES ('2013-12-26');
